@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>Play Football</title>
+	<style>
+		#football-field
+		{
+			background-color:#3fff00;
+			width:600px;
+			height:400px;
+		}
+	
+	</style>
+</head>
+<body>
+	<div id="football-field">
+
+	</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+    <script>
+        jQuery(function($){
+            var $footballField  = $('#football-field');
+            var socket          = io.connect();
+
+            var Keyboard = {};
+            var Game = {};
+            Keyboard.pressedKeys = [];
+            Keyboard.allowedKeys = [65, 68, 83, 87];  		// WASD-keys. For i18n this should be changeable
+            Game.mappedAction = ['l', 'r', 'd', 'u'];		// map these actions with "allowedKeys"-array
+            Game.currentActions = [];
+            document.onkeydown = processKeyDownEvent;
+            document.onkeyup = processKeyUpEvent;
+
+            function processKeyDownEvent(e){
+                if(!Keyboard.pressedKeys[e.which] && isAllowedKey(e.which) ){
+                    Keyboard.pressedKeys[e.which] = 1;
+                    sendCurrentActionsToServer()
+                }
+            }
+
+            function processKeyUpEvent(e){
+                if(isAllowedKey(e.which) ){
+                    Keyboard.pressedKeys[e.which] = 0;
+                    sendCurrentActionsToServer()
+                }
+            }
+
+            function isAllowedKey(key){
+                if(Keyboard.allowedKeys.indexOf(key) != -1){
+                    return true;
+                }
+                return false;
+            }
+
+            function sendCurrentActionsToServer(){
+                for(var i=0; i < Keyboard.allowedKeys.length; i++){
+                    if(Keyboard.pressedKeys[Keyboard.allowedKeys[i]]){
+                        Game.currentActions.push(Game.mappedAction[i]);
+                    }
+                }
+                // if all keys have been released, send "null" instead of empty array
+                if(Game.currentActions.length == 0){
+                    Game.currentActions.push("null");
+                }
+
+                console.log("Sending these actions to the server: ", Game.currentActions);
+                socket.emit('move', Game.currentActions);
+                Game.currentActions = [];  // clear array
+            }
+
+        });
+
+
+
+
+        // socket.on( 'connect', function()        { console.log("connect");   } );
+        // socket.on( 'message', function(message) { console.log(message);  } );
+        // socket.on( 'update-scene', function(data){ console.log("Player status:"+ data);  });
+        // socket.on( 'disconnect', function()     {   } );
+        // socket.on( 'hello', function(data) { console.log("hey",data);  } );
+        // socket.emit('player-input', {name:"asdf"});
+
+    </script>
+</body>
+</html>
+
+
