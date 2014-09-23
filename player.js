@@ -4,7 +4,7 @@
     position.y = 0;
 
     module.exports.move = function() {
-       console.log("hello module");
+       console.log("hello player");
     }
 
 }());
