@@ -70,6 +70,7 @@
                 mapKeyCodesToActions();
                 console.log("Sending these actions to the server: ", Game.currentActions);
                 socket.emit('move', Game.currentActions);
+                //socket.emit('move', ["xxx","xxx","xxx","xxx"]);
                 Game.currentActions = [];  // clear array
             }
 
