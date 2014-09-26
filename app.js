@@ -4,7 +4,7 @@ express = require('express');
 app = express();
 server = require('http').createServer(app);
 io = require('socket.io').listen(server);
-websocket = require("websocket.js");
+websocket = require("./game_server/websocket.js");
 
 // create web-server
 server.listen(3000);
