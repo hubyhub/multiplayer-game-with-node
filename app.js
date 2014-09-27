@@ -2,6 +2,7 @@ var express, app, server, io, websocket;
 
 express = require('express');
 app = express();
+
 server = require('http').createServer(app);
 io = require('socket.io').listen(server);
 websocket = require("./game_server/websocket.js");
