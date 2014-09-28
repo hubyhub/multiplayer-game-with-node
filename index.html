@@ -7,46 +7,45 @@
 			background-color:#3fff00;
 			width:600px;
 			height:400px;
+            position:relative;
 		}
-	
-	</style>
+
+
+
+    </style>
 </head>
 <body>
 	<div id="football-field">
 
 	</div>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdn.socket.io/socket.io-1.1.0.js"></script>
     <script>
         jQuery(function($){
             var $footballField  = $('#football-field');
             var socket          = io.connect();
+
             var Player = {};
-            Player.isPlaying = false;
+
+            var sessionId;
             var Keyboard = {};
             var Game = {};
             Keyboard.pressedKeys = [];
             Keyboard.allowedKeys = [65, 68, 83, 87];  		// For i18n the user should be able to map these keys to his own needs. (WASD-keys atm.)
             Game.mappedAction = ['l', 'r', 'd', 'u'];		// Instead of key-codes, "ACTIONS" will be sent to the server. (LEFT, RIGHT, DOWN, UP)
             Game.currentActions = [];
-            document.onkeydown = processKeyDownEvent;
-            document.onkeyup = processKeyUpEvent;
 
 
             // User has (re)connected to socket.io
             socket.on('connect',function() {
-                var sessionId = socket.io.engine.id;
+                sessionId = socket.io.engine.id;
+
                 if( isPlaying() ){
-                    // reconnect(sessionID);
-                    // getName
-                    // position
-                    console.log("reconnecting...");
+                    Player = reconnect(sessionId);
                 }
                 else {
-                   Player.name = prompt("Please enter your name:", "");
-                   socket.emit("new-player", {name: Player.name, sessionId: sessionId});
-                   //TODO wait for CALLBACK if true processkeydown event
-                    setCookie("gamesession", sessionId, 300);
+                    createNewPlayer();       // bzw join new game?
                 }
 
             });
@@ -95,9 +94,24 @@
             }
 
 
-
-
-
+            function createNewPlayer(){
+                Player.name = prompt("Please enter your name:", "");
+                socket.emit("new-player",{name: Player.name},
+                        // callback
+                        function(confirmation){
+                            if(confirmation){
+                                setCookie("gamesession", sessionId, 300);
+                                console.log("Player '"+ Player.name+ "' successfully created.");
+                                //Later: show user stadiums
+                                //Now: autojoin to game.
+                                joinGame();
+                            }
+                            else{
+                                console.log("Couldn't create a new Player. Please try again later.");
+                            }
+                        }
+                );
+            }
             function setCookie(cname, cvalue, exdays) {
                 var d = new Date();
                 d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -126,6 +140,27 @@
                         setCookie("username", user, 365);
                     }
                 }
+            }
+
+
+
+            function reconnect(sessionId){
+                var gameSession= getCookie("gamesession");
+
+                console.log("reconnecting...to: ", gameSession);
+                socket.emit("reconnect", {"gameSession" : gameSession}, function(playerFromServer){
+
+                   console.log("Got this player: " + playerFromServer);
+                });
+
+                // getName
+                // position
+            }
+
+            function joinGame(){
+                // addPlayer
+                document.onkeydown = processKeyDownEvent;
+                document.onkeyup = processKeyUpEvent;
             }
 
             function isPlaying(){
