@@ -1,5 +1,5 @@
 (function() {
-    var Player = require('../game_core/player.js');
+    var Player = require('../game_core/player_old.js');
 
     module.exports.start = function(io) {
 

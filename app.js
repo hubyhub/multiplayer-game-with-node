@@ -16,6 +16,7 @@ console.log("Server is listening on http://localhost:3000...");
 
 // serve statics
 app.use("/game_client", express.static(__dirname + '/game_client'));
+app.use("/game_core", express.static(__dirname + '/game_core'));
 // the initial html
 app.get('/', function(req, res){
 	res.sendfile(__dirname +'/index.html');

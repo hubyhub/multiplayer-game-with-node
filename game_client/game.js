@@ -8,6 +8,17 @@ var Game = (function() {
             Socket.connect();
 
         },
+        addPlayer: function(x,y,name){
+         // adding player on field
+         player.run();
+         console.log("adding player");
+            
+        },
+        updateGameState: function(){
+          //
+            console.log("updating");
+            
+        },
         stop: function(){
             Socket.disconnect();
         },
@@ -28,6 +39,10 @@ setTimeout(function(){
     Game.start();
 }, 1000)
 
+setTimeout(function(){
+    Game.addPlayer(12, 12, "Alien");
+}, 1500)
+
 
 setTimeout(function(){
     Game.stop();
@@ -35,6 +50,6 @@ setTimeout(function(){
 
 
 
-setInterval(function() {
-    Socket.sendPing();
-}, 2000);
+//setInterval(function() {
+//    Socket.sendPing();
+//}, 2000);
