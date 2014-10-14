@@ -4,20 +4,23 @@
     <list default="true" id="10c0a425-9ba2-421d-99fe-451dd82eea8d" name="Default" comment="" />
     <ignored path="socket.io.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412631848897" ignored="false" />
+    <file path="/index.html" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1413122890540" ignored="false" />
     <file path="/app.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412373366504" ignored="false" />
     <file path="/web-server.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1411594474062" ignored="false" />
     <file path="/web-sockets.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1411594295645" ignored="false" />
-    <file path="/player.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412632136759" ignored="false" />
-    <file path="/websocket.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412434991149" ignored="false" />
+    <file path="/player.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412896907586" ignored="false" />
+    <file path="/websocket.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1413141246032" ignored="false" />
     <file path="/client.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412384120117" ignored="false" />
     <file path="/a.html" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1411944925927" ignored="false" />
     <file path="/a.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412194051198" ignored="false" />
-    <file path="/socket.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412434579840" ignored="false" />
+    <file path="/socket.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1413124252995" ignored="false" />
     <file path="/keyboard.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412435406500" ignored="false" />
     <file path="/index_back.html" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412367552788" ignored="false" />
-    <file path="/game.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412632200489" ignored="false" />
+    <file path="/game.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412979205050" ignored="false" />
     <file path="/arena.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1412383909767" ignored="false" />
+    <file path="/cookie.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1413129947773" ignored="false" />
+    <file path="/sessionHandler.js" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1413124234114" ignored="false" />
+    <file path="/a.dummy" changelist="10c0a425-9ba2-421d-99fe-451dd82eea8d" time="1413137761068" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +40,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game_client/game.js">
+      <file leaf-file-name="socket.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game_client/socket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="139" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
+            <state line="36" column="34" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="player.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game_core/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="150" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="347" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessionHandler.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game_client/sessionHandler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="16" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,52 +70,52 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="101" selection-start="85" selection-end="85" vertical-scroll-proportion="-7.1923075">
+            <state line="22" column="71" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="socket.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game_client/socket.js">
+      <file leaf-file-name="backup.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game_client/backup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="5" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
+            <state line="94" column="0" selection-start="2682" selection-end="2993" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/game_core/player.js">
+      <file leaf-file-name="cookie.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game_server/cookie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="51" selection-start="192" selection-end="192" vertical-scroll-proportion="0.20067453">
+            <state line="8" column="14" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player_old.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game_core/player_old.js">
+      <file leaf-file-name="cookie.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game_client/cookie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="16" selection-end="246" vertical-scroll-proportion="0.0">
+            <state line="12" column="0" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="keyboard.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game_client/keyboard.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="5" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="websocket.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="websocket.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game_server/websocket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="49" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
+            <state line="67" column="155" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.029010238">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="websocket_backkup.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game_server/websocket_backkup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="37" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,30 +131,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/game_core/websocket.js" />
-        <option value="$PROJECT_DIR$/game_server/client.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/index_back.html" />
         <option value="$PROJECT_DIR$/game_client/backup.js" />
         <option value="$PROJECT_DIR$/game_client/render.js" />
         <option value="$PROJECT_DIR$/game_client/arena.js" />
         <option value="$PROJECT_DIR$/game_client/client.js" />
         <option value="$PROJECT_DIR$/game_client/player.js" />
-        <option value="$PROJECT_DIR$/game_client/socket.js" />
-        <option value="$PROJECT_DIR$/game_client/keyboard.js" />
-        <option value="$PROJECT_DIR$/game_server/websocket.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/game_core/player.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/game_core/cookie.js" />
         <option value="$PROJECT_DIR$/game_client/game.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/game_client/keyboard.js" />
+        <option value="$PROJECT_DIR$/game_client/sessionHandler.js" />
+        <option value="$PROJECT_DIR$/game_client/socket.js" />
+        <option value="$PROJECT_DIR$/game_client/cookie.js" />
+        <option value="$PROJECT_DIR$/game_server/cookie.js" />
+        <option value="$PROJECT_DIR$/game_server/websocket.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="33" />
-    <option name="y" value="135" />
-    <option name="width" value="1871" />
-    <option name="height" value="776" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -198,6 +210,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="game_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socket.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multiplayer-game-with-node" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game_core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socket.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multiplayer-game-with-node" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="game_client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -219,13 +259,13 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\dev\multiplayer-game-with-node\game_client" />
-      <recent name="D:\dev\multiplayer-game-with-node" />
       <recent name="D:\dev\multiplayer-game-with-node\game_server" />
+      <recent name="D:\dev\multiplayer-game-with-node" />
       <recent name="D:\dev\multiplayer-game-with-node\node_modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\dev\multiplayer-game-with-node\game_core" />
       <recent name="D:\dev\multiplayer-game-with-node\game_server" />
+      <recent name="D:\dev\multiplayer-game-with-node\game_core" />
       <recent name="D:\dev\multiplayer-game-with-node\game" />
     </key>
   </component>
@@ -277,22 +317,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="135" width="1871" height="776" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986567" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23471616" sideWeight="0.53090334" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16025303" sideWeight="0.6807564" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3192436" sideWeight="0.5002636" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46909666" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3192436" sideWeight="0.49973643" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -356,105 +396,105 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/game_client/render.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_client/arena.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="9" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="159" selection-end="159" vertical-scroll-proportion="0.029462738" />
+        <state line="8" column="57" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game_server/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="262" selection-end="262" vertical-scroll-proportion="0.2357019" />
+        <state line="8" column="34" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game_client/client.js">
+    <entry file="file://$PROJECT_DIR$/game_server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.14731368" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_client/backup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="27" selection-start="3534" selection-end="3540" vertical-scroll-proportion="0.64311594">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index_back.htmls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="19" selection-start="3128" selection-end="3876" vertical-scroll-proportion="-16.2" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="121" selection-end="121" vertical-scroll-proportion="0.18511796">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_client/keyboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="5" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_server/websocket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="49" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_core/player_old.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="16" selection-end="246" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="150" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_client/socket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="5" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="32" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game_client/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="139" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
+        <state line="14" column="30" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_client/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="40" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_client/keyboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="21" selection-start="1725" selection-end="1725" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_core/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="347" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="101" selection-start="85" selection-end="85" vertical-scroll-proportion="-7.1923075">
+        <state line="22" column="71" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game_core/player.js">
+    <entry file="file://$PROJECT_DIR$/game_client/sessionHandler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="51" selection-start="192" selection-end="192" vertical-scroll-proportion="0.20067453">
+        <state line="8" column="16" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_server/websocket_backkup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="37" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_client/backup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="0" selection-start="2682" selection-end="2993" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_client/cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_client/socket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="34" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_server/cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/socket.io/lib/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="17" selection-start="2215" selection-end="2215" vertical-scroll-proportion="0.3318584" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_server/websocket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="155" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.029010238">
           <folding />
         </state>
       </provider>

@@ -9,6 +9,7 @@ var Socket = (function() {
 
     function onConnect(){
         console.log("connected");
+        SessionHandler.setSession(socket.io.engine.id);
         Keyboard.startProcessing();
         sendPing();
     }
@@ -33,6 +34,9 @@ var Socket = (function() {
         latency = Date.now() - startTime;
         console.log(latency);
     }
+    function onRenewSession(data){
+         SessionHandler.renewSession(data);
+    }
 
     // exposed to public
     return {
@@ -42,7 +46,11 @@ var Socket = (function() {
             socket.on('disconnect', onDisconnect);
             socket.on('reconnecting', onReconnecting);
             socket.on('pong', onPong);
-           // socket.on('ping', onPing);
+            socket.on('new-session', onRenewSession);
+            // socket.on('ping', onPing);
+        },
+        addPlayer: function(text, data){
+            socket.emit(text, data);
         },
         disconnect: function(){
             socket.disconnect();

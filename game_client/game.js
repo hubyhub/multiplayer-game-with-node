@@ -6,13 +6,19 @@ var Game = (function() {
     return {
         start: function() {
             Socket.connect();
-
         },
         addPlayer: function(x,y,name){
-         // adding player on field
-         player.run();
-         console.log("adding player");
-            
+
+            // adding player on field
+            var manfred = new Player(0, 2, "id-asdfsdf", "manfreda");
+            manfred.move();
+
+            Socket.addPlayer("new-player", manfred);
+            var hanswurst = new Player(0,2,"id-asdfsdf", "hans");
+            hanswurst.move();
+            Socket.addPlayer("new-player", hanswurst);
+
+
         },
         updateGameState: function(){
           //
@@ -37,10 +43,10 @@ var Game = (function() {
 
 setTimeout(function(){
     Game.start();
-}, 1000)
+}, 100)
 
 setTimeout(function(){
-    Game.addPlayer(12, 12, "Alien");
+   // Game.addPlayer(12, 12, "Alien");
 }, 1500)
 
 

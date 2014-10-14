@@ -1,11 +1,21 @@
-(function(exports){
-    var pos = {x : 0, y : 0};
 
-    // your code goes here
+function Player(x,y, id, name) {
+    this.id = id;
+    this.x = x;
+    this.y = y;
+    this.name = name;
+    console.log("New Player created: ", this);
+}
 
-    exports.run = function(){
-        console.log("running");
-        return 'player lauft auf server and client'
-    };
+Player.prototype.move = function() {
+    console.log(this.name + " is moving");
+};
 
-})(typeof exports === 'undefined'? this['player']={}: exports);
+// making Player available in node.js
+if(typeof exports !== 'undefined'){
+    module.exports = Player;
+}
+
+
+
+

@@ -53,6 +53,7 @@ var Keyboard = (function() {
         stopProcessing: function(){
             document.onkeydown = null;
             document.onkeyup = null;
+            // TODO: reset all values
         },
         setMapping: function(newMapping){
             mapping = newMapping;

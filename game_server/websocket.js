@@ -1,98 +1,134 @@
 (function() {
-    var Player = require('../game_core/player_old.js');
+    var Player = require('../game_core/player.js');
+    var Cookie = require('../game_server/cookie.js');
+    var clients = {};
+    var disconnectedClients = [];
 
     module.exports.start = function(io) {
+    io.sockets.on('connection', onSocketConnection);
 
-        // create web-socket connections
-        var connections = 0;
-        var possibleUserActions = ["u","d","l","r","null"];
-        io.sockets.on('connection', onSocketConnection);
-        var player;
-        var players = [];
-        var playersBlacklist = [];
+    // A client has connected
+    function onSocketConnection(socket){
+        addPlayer(socket);
+        socket.on('disconnect', onClientDisconnect);
+    }
 
-        // A client has connected
-        function onSocketConnection(socket){
-            // console.log("read cookie: " +client.request.headers.cookie);
-            connections++;
+    // use facebook/whatever id/cookie to identify the client
+    function addPlayer(socket){
+        var sessionId = getIdByCookie(socket.request.headers.cookie);
 
-            socket.on('new-player', onNewPlayer);
-            socket.on('try-reconnect', onReconnect);
-            socket.on('move', onMovePlayer);
-            socket.on('disconnect', onClientDisconnect);
-            socket.on('ping', function() { socket.emit('pong');});
-
-        }
-
-
-
-        // Adds a new Player
-        function onNewPlayer(data, callback){
-            player = new Player(30,42, this.id, data.name);
-            players.push(player);
-            if(player){
-                callback(true);
+        if(sessionId != ""  ){
+            var c = getClient(sessionId);
+            if(c == null){
+                createNewPlayer(socket.id);
+                socket.emit("new-session", socket.id );
             }
             else{
-                callback(false);
+                restoreClient(socket.id, c);
             }
         }
-
-        // Sends Player back his data
-        function onReconnect(data, callback){
-               console.log("onreconnect");
-               
-            //TODO SEND PLAYER WITh data.session back
-            for (var i = 0; i < players.length; i++) {
-                if(data.sessionId == players[i].id){
-                    // todo seccurity check
-                    console.log("juhu player found: ",players[i]);
-                    callback(players[i]);
-                    return;
-                }
-                callback(false);
-            }
-
-            callback(player);
-            //meanwhile sendback player
-            console.log("new id is: " + this.id);
-            console.log("however data.sessionId is: " + data.sessionId);
+        else{
+            createNewPlayer(socket.id);
         }
 
-        // TODO: SECURITY CHECK! make sure there is no rubbish, hacks in "data". // array has allowed "userActsions"
-        function onMovePlayer(data){
+    }
+
+    function restoreClient(socketId, c){
+        console.log("restoring Client: ", c.id);
+        
+        clients[socketId] = c;
+        delete clients[c.id];
+        // removing client from disconnectedArray
+        respawnClient(socketId);
+    }
 
 
-            if(Array.isArray(data) && data.length <= possibleUserActions.length ){
-                player.move();
-                //ClientInput.update(data, id);
+    function getClient(clientId){
+         //console.log("RESTORE existing player"+ socketId);
+         //check if session exists. if not create new pleyer
+         for (var client in clients) {
+             var c = clients[client];
+             if(c.id == clientId){
+                return c;
+             }
+         }
+         return null;
+    }
+
+    function createNewPlayer(id){
+        console.log("creating new Client + Player",id);
+        var client = {};
+        client.id  =  id;
+
+        client.player = new Player(23, 23, id, "whatever-name");
+        clients[id] = client;
+    }
+
+
+
+
+    //TODO: check if cookie is empty.. and so on
+    function getIdByCookie(cookies){
+
+
+        return Cookie.getCookie(cookies,"gamesession");
+
+    }
+
+
+
+
+    function onClientDisconnect(data){
+       // console.log("trying to delete ",clients);
+
+        var client = {};
+        client.timestamp = Date.now();
+        client.id = getClient(this.id);
+
+        disconnectedClients.push(client);
+
+      //  delete clients[this.id];
+
+       // console.log("The client "+ this.id +" has closed the connection.\n Clients remaining: ", clients);
+    }                                            clients
+
+    function removeGoneClients(){
+        var maxTimeWaiting = 10000;
+        var disconnectedDuration = 0;
+        var now = Date.now();
+        console.log(disconnectedClients);
+        var len = disconnectedClients.length;
+        while (len--) {
+            disconnectedDuration = now - disconnectedClients[len].timestamp ;
+
+            console.log("disconnected for : "+ disconnectedDuration);
+            if( disconnectedDuration > maxTimeWaiting){
+                // remove Clients from array
+                delete clients[disconnectedClients[len].id];
+                disconnectedClients.splice(len,1);
             }
-            else{
-                console.log("Please don't try to hack me!");
+        }
+    }
+
+    function respawnClient(clientId){
+        var len = disconnectedClients.length;
+        while (len--) {
+            console.log(disconnectedClients[len].id +"    "+ clientId);
+            if(disconnectedClients[len].id === clientId){
+                disconnectedClients.splice(len,1);
             }
-
-
-
-
-            // TODO:
-            // call player constructer
-            // position Player
-            // get Player id (client) Name. can be done only once.
-            // store player in session
-            // add player to players array
-            //io.sockets.emit('update-scene', data.name+"a");
-
         }
+    }
 
-        function onClientDisconnect(data){
-            connections--;
-            // The "this" object refers to the client variable from the onSocketConnection
-            console.log("The client "+ this.id +" has closed the connection.", connections);
-        }
+
+
+    var cleanupInterval = setInterval(removeGoneClients, 2000);
 
 
 
     }
+
+
 
 }());
 
